@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Comments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+
+    <title> HTML5 page </title>
+    <style>
+        .fa {
+            font-size: 50px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .fa:hover {
+                color: darkblue;
+            }
+
+        #hello {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="hello">
+<textarea id="words" rows="10" cols="25">Enter comment</textarea>
+        <input type="button" onclick="getwords()" value="Post" /> <br>
+        <p id="para"></p>
+    </form>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+    <script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = "enter comments"
+
+        }
+
+            function myFunction(x) {
+                x.classList.toggle("fa-thumbs-down");
+            }
+
+    </script>
+
+</body>
+</html>
+
+
